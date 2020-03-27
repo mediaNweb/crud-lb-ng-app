@@ -1,0 +1,100 @@
+<div class="card-column">
+  <div class="card">
+    <div class="card-header">Add Result</div>
+    <div class="card-body">
+      <form (ngSubmit)="send(f)" #f="ngForm">
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            name="event_id"
+            [(ngModel)]="results.event_id"
+            placeholder="Event Id"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="number"
+            class="form-control"
+            name="bib"
+            [(ngModel)]="results.bib"
+            placeholder="Bib"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="number"
+            class="form-control"
+            name="rank_overall"
+            [(ngModel)]="results.rank_overall"
+            placeholder="Overall Ranking"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="number"
+            class="form-control"
+            name="rank_gender"
+            [(ngModel)]="results.rank_gender"
+            placeholder="Gender Ranking"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="number"
+            class="form-control"
+            name="rank_bracket"
+            [(ngModel)]="results.rank_bracket"
+            placeholder="Bracket Ranking"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            name="time_gps"
+            [(ngModel)]="results.time_gps"
+            placeholder="GPS Time"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            name="time_chip"
+            [(ngModel)]="results.time_chip"
+            placeholder="Chip Time"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            name="time_gun"
+            [(ngModel)]="results.time_gun"
+            placeholder="Gun Time"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            name="pace"
+            [(ngModel)]="results.pace"
+            placeholder="Pace"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="number"
+            class="form-control"
+            name="laps"
+            [(ngModel)]="results.laps"
+            placeholder="Laps"
+          />
+        </div>
+        <button type="submit" class="btn btn-success">Send</button>
+      </form>
+    </div>
+  </div>
+</div>

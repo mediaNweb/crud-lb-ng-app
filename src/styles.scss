@@ -1,1 +1,66 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800;900&display=swap");
+
+body {
+  font-family: "Kanit", sans-serif;
+}
+
+.wrapper {
+  position: relative;
+  min-height: 100vh;
+  height: 100%;
+}
+
+.wrapper .hero-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(to top, #8c0303, #0d0d0d);
+}
+
+.wrapper .hero-image img {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  object-position: 0% 0%;
+  object-fit: cover;
+  opacity: 0.25;
+}
+
+/*Filter styles*/
+.saturate {
+  filter: saturate(3);
+}
+
+.grayscale {
+  filter: grayscale(100%);
+}
+
+.contrast {
+  filter: contrast(160%);
+}
+
+.brightness {
+  filter: brightness(0.25);
+}
+
+.blur {
+  filter: blur(3px);
+}
+
+.invert {
+  filter: invert(100%);
+}
+
+.sepia {
+  filter: sepia(100%);
+}
+
+.huerotate {
+  filter: hue-rotate(180deg);
+}
+
+.rss.opacity {
+  filter: opacity(50%);
+}

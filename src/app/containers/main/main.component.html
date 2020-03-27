@@ -1,0 +1,9 @@
+<div class="wrapper">
+  <div class="hero-image">
+    <img class="grayscale" src="../../../assets/img/hero.jpg" />
+  </div>
+  <app-nav></app-nav>
+  <div *ngFor="let result of results">
+    <app-result [results]="result"></app-result>
+  </div>
+</div>
