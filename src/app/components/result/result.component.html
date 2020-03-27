@@ -1,51 +1,67 @@
 <section>
   <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="card-column">
-          <div class="card">
-            <div class="card-header">
-              <h2>Resuls for Bib: {{ results.bib }}</h2>
-            </div>
-            <div class="card-body">
-              <table class="table table-responsive table-sm">
-                <tbody>
-                  <tr>
-                    <th scope="row">Overall Rank</th>
-                    <td>{{ results.rank_overall }}</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Gender Rank</th>
-                    <td>{{ results.rank_gender }}</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Bracket Rank</th>
-                    <td>{{ results.rank_bracket }}</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">GPS Time</th>
-                    <td>{{ results.time_gps }}</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Chip Time</th>
-                    <td>{{ results.time_chip }}</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Gun Time</th>
-                    <td>{{ results.time_gun }}</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Pace</th>
-                    <td>{{ results.pace }}</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Laps</th>
-                    <td>{{ results.laps }}</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
+    <div class="card-columns">
+      <div class="card">
+        <div class="card-header">
+          <h2>Resuls for Bib: {{ results.bib }}</h2>
+          <button (click)="settings()" class="btn btn-link">
+            <span *ngIf="!opt">Show settings</span>
+            <span *ngIf="opt">Hide settings</span>
+          </button>
+        </div>
+        <div class="card-body">
+          <table class="table table-responsive table-sm">
+            <tbody>
+              <tr>
+                <th scope="row">Overall Rank</th>
+                <td>{{ results.rank_overall }}</td>
+              </tr>
+              <tr>
+                <th scope="row">Gender Rank</th>
+                <td>{{ results.rank_gender }}</td>
+              </tr>
+              <tr>
+                <th scope="row">Bracket Rank</th>
+                <td>{{ results.rank_bracket }}</td>
+              </tr>
+              <tr>
+                <th scope="row">GPS Time</th>
+                <td>{{ results.time_gps }}</td>
+              </tr>
+              <tr>
+                <th scope="row">Chip Time</th>
+                <td>{{ results.time_chip }}</td>
+              </tr>
+              <tr>
+                <th scope="row">Gun Time</th>
+                <td>{{ results.time_gun }}</td>
+              </tr>
+              <tr>
+                <th scope="row">Pace</th>
+                <td>{{ results.pace }}</td>
+              </tr>
+              <tr>
+                <th scope="row">Laps</th>
+                <td>{{ results.laps }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="card-footer">
+          <span *ngIf="opt">
+            <button
+              [routerLink]="['/edit', results.id]"
+              class="btn btn-outline-info btn-block"
+            >
+              Edit
+            </button>
+            <button
+              (click)="delete(results)"
+              class="btn btn-outline-danger btn-block"
+            >
+              Delete
+            </button>
+          </span>
         </div>
       </div>
     </div>

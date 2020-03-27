@@ -3,7 +3,12 @@
     <img class="grayscale" src="../../../assets/img/hero.jpg" />
   </div>
   <app-nav></app-nav>
-  <div *ngFor="let result of results">
-    <app-result [results]="result"></app-result>
+  <div class="container">
+    <div class="card-columns">
+      <app-result
+        *ngFor="let result of results"
+        [results]="result"
+      ></app-result>
+    </div>
   </div>
 </div>

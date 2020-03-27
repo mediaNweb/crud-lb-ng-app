@@ -19,7 +19,6 @@ export class MainComponent implements OnInit {
   getResults() {
     this.databaseService.getResults().subscribe(
       (results: Results[]) => {
-        console.table(results);
         this.results = results;
       },
       err => {
